@@ -1,0 +1,256 @@
+[
+  {
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1i66uoo/the_tariff_cycle_is_back/",
+    "title": "The Tariff Cycle is Back🏳             : r/wallstreetbets - Reddit",
+    "data": [
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      }
+    ]
+  },
+  {
+    "url": "https://www.reddit.com/r/wallstreetbets/",
+    "title": "wallstreetbets - Reddit",
+    "data": [
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      }
+    ]
+  },
+  {
+    "url": "https://www.bnnbloomberg.ca/markets/2025/03/13/us-stocks-drift-as-trumps-latest-tariff-threat-offsets-good-news-on-the-economy/",
+    "title": "Wall Street spirals after Trump escalates his trade war",
+    "data": [
+      {
+        "name": "Algoma Steel",
+        "ticker": null,
+        "sector": "Steel",
+        "tariff_impact": "Tremendous opportunity",
+        "reasons": [
+          "Trade war"
+        ],
+        "error": false
+      },
+      {
+        "name": "Palantir Technologies",
+        "ticker": null,
+        "sector": "Artificial Intelligence",
+        "tariff_impact": "Negative",
+        "reasons": [
+          "Part of the AI sector which has been under pressure in the recent sell-off.",
+          "Critics say its prices shot too high in the frenzy around AI."
+        ],
+        "error": false
+      },
+      {
+        "name": "Super Micro Computer",
+        "ticker": null,
+        "sector": "Technology (Servers)",
+        "tariff_impact": "Negative",
+        "reasons": [
+          "Part of the AI sector which has been under pressure in the recent sell-off.",
+          "Makes servers, potentially affected by tariffs on imported components or reduced demand due to economic uncertainty."
+        ],
+        "error": false
+      },
+      {
+        "name": "Nvidia",
+        "ticker": null,
+        "sector": "Artificial Intelligence",
+        "tariff_impact": "Negative",
+        "reasons": [
+          "Part of the AI sector which has been under pressure in the recent sell-off.",
+          "Critics say its prices shot too high in the frenzy around AI."
+        ],
+        "error": false
+      },
+      {
+        "name": "Tesla",
+        "ticker": null,
+        "sector": "Automotive",
+        "tariff_impact": "Potentially Negative",
+        "reasons": [
+          "Down more than 40% in 2025, indicating vulnerability to broader market downturns.",
+          "Could be affected by tariffs on imported components or reduced consumer spending due to economic uncertainty."
+        ],
+        "error": false
+      },
+      {
+        "name": "American Eagle Outfitters",
+        "ticker": null,
+        "sector": "Retail",
+        "tariff_impact": "Potentially Negative",
+        "reasons": [
+          "Less robust demand and colder weather have held back its performance.",
+          "Forecasted a dip in revenue for the upcoming year.",
+          "Reduced consumer spending due to economic uncertainty could further impact sales."
+        ],
+        "error": false
+      }
+    ]
+  },
+  {
+    "url": "https://fortune.com/2025/03/14/nvidia-stock-gen-z-investment-robinhood/",
+    "title": "Nvidia surpasses Tesla as the No. 1 held stock on Robinhood ...",
+    "data": [
+      {
+        "name": "Nvidia",
+        "ticker": "NVDA",
+        "sector": "Technology",
+        "tariff_impact": "Negative",
+        "reasons": [
+          "Rising fears of a U.S. recession",
+          "Tariffs"
+        ],
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": "Tesla",
+        "ticker": "TSLA",
+        "sector": "Automobiles",
+        "tariff_impact": "Potentially negatively affected depending on the specifics of the tariffs and Tesla's supply chain.",
+        "reasons": [
+          "Increased costs of imported components or materials used in Tesla's vehicles.",
+          "Potential for retaliatory tariffs from other countries on US exports, impacting Tesla's sales."
+        ],
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      },
+      {
+        "name": null,
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": null,
+        "error": false
+      }
+    ]
+  },
+  {
+    "url": "https://www.aljazeera.com/economy/2022/9/5/what-are-meme-stocks-and-why-are-they-back",
+    "title": "What are meme stocks and why are they back? - Al Jazeera",
+    "data": [
+      {
+        "name": "GameStop",
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": [],
+        "error": false
+      },
+      {
+        "name": "AMC",
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": [],
+        "error": false
+      },
+      {
+        "name": "Bed Bath & Beyond",
+        "ticker": null,
+        "sector": null,
+        "tariff_impact": null,
+        "reasons": [],
+        "error": false
+      }
+    ]
+  }
+]
