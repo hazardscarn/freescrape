@@ -1,67 +1,66 @@
+import os
 import asyncio
-from crawl4ai import AsyncWebCrawler, CrawlerRunConfig,CacheMode
-from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
-import os 
-from crawl4ai.content_filter_strategy import BM25ContentFilter,PruningContentFilter
+from typing import List, Dict, Any
+from crawl4ai import AsyncWebCrawler, CrawlerRunConfig
+from src.search_crawler import ContentCrawler
 
 
-bm25_filter = BM25ContentFilter(
-user_query="machine learning",
-bm25_threshold=1.2
+
+def test_content_crawler(query: str, max_results: int = 3, filter_type: str = None):
+    """
+    Test the ContentCrawler class by running a search and saving the raw and fit markdown files
+    
+    Args:
+        query: Search query
+        max_results: Maximum number of search results to process
+        filter_type: Type of content filter to apply ("bm25", "prune", or None)
+    """
+    print(f"Testing ContentCrawler with query: {query}")
+    
+    # Create output directory if it doesn't exist
+    output_dir = "crawler_results"
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Initialize the crawler
+    crawler = ContentCrawler(
+        query=query,
+        max_results=max_results,
+        filter=filter_type,
+        bm25_threshold=1.2,
+        prune_threshold=0.5,
     )
-
-prune_filter = PruningContentFilter(
-    threshold=0.5,
-    threshold_type="fixed",  # or "dynamic"
-    min_word_threshold=10
-)
-async def main():
-
-
-
-
-    md_generator = DefaultMarkdownGenerator(
-        content_filter=bm25_filter,
-        options={"ignore_links": True}
-    )
-
-    # md_generator = DefaultMarkdownGenerator(
-    #     options={
-    #         "ignore_links": True,
-    #         "escape_html": True,
-    #         "ignore_images": True,
-    #         "body_width": 80
-    #     }
-    # )
-
-    # config = CrawlerRunConfig(
-    #     markdown_generator=md_generator
-    # )
-
-    config = CrawlerRunConfig(
-        markdown_generator=DefaultMarkdownGenerator(
-            content_filter=prune_filter,
-            options={"ignore_links": True},
-            
-            ),
-        excluded_tags=["nav", "footer", "header"],
-        exclude_external_links=True,
-        check_robots_txt=True, # Ensures compliance with robots.txt rules for ethical and legal web crawling.
+    
+    # Check if we got results
+    if not crawler.colleced_data:
+        print("No results collected")
+        return
+    
+    # Save the results
+    for i, result in enumerate(crawler.colleced_data):
+        # Create a sanitized filename from the URL
+        url_filename = result['url'].replace('https://', '').replace('http://', '')
+        url_filename = ''.join(c if c.isalnum() or c in ['-', '_', '.'] else '_' for c in url_filename)
+        url_filename = url_filename[:50]  # Limit filename length
         
-    )
-    async with AsyncWebCrawler() as crawler:
-        result = await crawler.arun("https://www.studiobinder.com/blog/interstellar-explained-meaning-plot-summary/", config=config)
-
-        if result.success:
-            print("Raw Markdown Output:\n")
-            print(result.markdown)  # The unfiltered markdown from the page
-            with open(os.path.join("raw_markdown.md"), "w", encoding="utf-8") as f:
-                f.write(result.markdown.raw_markdown)
-            with open(os.path.join("fit_markdown.md"), "w", encoding="utf-8") as f:
-                f.write(result.markdown.fit_markdown)
-        else:
-            print("Crawl failed:", result.error_message)
-
+        # Save raw markdown
+        if result['raw_markdown']:
+            raw_path = os.path.join(output_dir, f"{i+1}_{url_filename}_raw.md")
+            with open(raw_path, "w", encoding="utf-8") as f:
+                f.write(result['raw_markdown'])
+            print(f"Saved raw markdown to: {raw_path}")
+        
+        # Save fit markdown
+        if result['fit_markdown']:
+            fit_path = os.path.join(output_dir, f"{i+1}_{url_filename}_fit.md")
+            with open(fit_path, "w", encoding="utf-8") as f:
+                f.write(result['fit_markdown'])
+            print(f"Saved fit markdown to: {fit_path}")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    # Test ContentCrawler
+    test_content_crawler(
+        query="Interstellar Ending Explained",
+        max_results=6,
+        filter_type="prune"  # Try "bm25", "prune", or None
+    )
+    
